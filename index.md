@@ -2,14 +2,19 @@
 
 A collection of obscure or helpful tips, tricks, and hacks for using STM32s.
 
-Canonical URL: http://stm32.agg.io
+Canonical URL: [](http://stm32.agg.io)
 
-Please help: https://github.com/adamgreig/stm32tt
+Please help: [](https://github.com/adamgreig/stm32tt)
+
+---
 
 ## Datasheets and Reference Manuals
 
-[STM32F405xx/STM32F407xx Datasheet](http://www.st.com/resource/en/datasheet/stm32f405rg.pdf)
-[STM32F405/415, STM32F407/417, STM32F427/437, and STM32F429/439 Reference Manual](http://www.st.com/resource/en/reference_manual/dm00031020.pdf)
+### STM32F405 / 415 / 407 / 417
+[Datasheet](http://www.st.com/resource/en/datasheet/stm32f405rg.pdf)
+[Reference Manual](http://www.st.com/resource/en/reference_manual/dm00031020.pdf)
+
+---
 
 ## STM32 and ChibiOS
 
@@ -23,7 +28,11 @@ GPIOA->ODR |= 1; \
 ```
 where GPIOA1 is an LED.
 
+---
+
 ## STM32 and libopencm3
+
+---
 
 ## STM32 and GDB
 
@@ -68,8 +77,11 @@ Optionally include `GPIOA->ODR |= 1;` if you have an error LED that can be lit w
 
 [Source](http://jpa.kapsi.fi/stuff/other/stm32-hardfault-backtrace.html)
 
+---
+
 ## STM32 and Rust
 
 ### Useful Links
 [Cargo template for Cortex-M projects](https://github.com/japaric/cortex-m-template)
+
 [Guide to embedded devleopment in Rust](https://japaric.github.io/copper)

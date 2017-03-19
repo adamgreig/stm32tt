@@ -3,5 +3,3 @@
 A collection of obscure or helpful tips, tricks, and hacks for using STM32s.
 
 Canonical URL: http://stm32.agg.io
-
-Please help: https://github.com/adamgreig/stm32tt

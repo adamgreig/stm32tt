@@ -217,10 +217,8 @@ Optionally include `GPIOA->ODR |= 1;` if you have an error LED that can be lit w
 
 [Guide to embedded devleopment in Rust](https://japaric.github.io/copper)
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.slim.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
 <script type="text/javascript">
-$('h2,h3,h4,h5,h6').filter('[id]').each(function () {
-    $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + 
-    '</a>');
+anchors.add();
 });
 </script>

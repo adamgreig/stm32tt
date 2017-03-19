@@ -6,6 +6,9 @@ Canonical URL: <http://stm32.agg.io>
 
 Please help: <https://github.com/adamgreig/stm32tt>
 
+* Table of Contents
+{:toc}
+
 ---
 
 ## Datasheets and Reference Manuals

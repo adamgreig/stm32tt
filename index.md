@@ -1,17 +1,13 @@
 ---
 title: STM32 Tips and Tricks
 ---
-<style type="text/css">
-ul > li {
-    margin-left: 10px;
-}
-</style>
+<style type="text/css" src="style.css"></style>
 
 # STM32 Tips and Tricks
 
 A collection of obscure or helpful tips, tricks, and hacks for using STM32s.
 
-Canonical URL: <http://stm32.agg.io>
+Canonical URL: <https://stm32.agg.io>
 
 Please help: <https://github.com/adamgreig/stm32tt>
 

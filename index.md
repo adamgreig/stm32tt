@@ -10,8 +10,8 @@ Please help: <https://github.com/adamgreig/stm32tt>
 
 ## Datasheets and Reference Manuals
 
-### STM32F405 / 415 / 407 / 417
-[Datasheet](http://www.st.com/resource/en/datasheet/stm32f405rg.pdf)
+STM32F405 / 415 / 407 / 417:
+[Datasheet](http://www.st.com/resource/en/datasheet/stm32f405rg.pdf),
 [Reference Manual](http://www.st.com/resource/en/reference_manual/dm00031020.pdf)
 
 ---
@@ -24,9 +24,12 @@ Light up an LED when a SysHalt occurs (e.g. due to a failed assertion).
 
 In `chconf.h`, find `CH_CFG_SYSTEM_HALT_HOOK(reason)` and replace the empty body with something like:
 ```
-GPIOA->ODR |= 1; \
+#define CH_CFG_SYSTEM_HALT_HOOK(reason) { \
+    GPIOA->ODR |= (1<<5); \
+}
+
 ```
-where GPIOA1 is an LED.
+where GPIOA5 (in this case) is an LED.
 
 ---
 

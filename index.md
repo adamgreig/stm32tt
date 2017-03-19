@@ -159,6 +159,14 @@ To enable CSS:
 RCC->CR |= RCC_CR_CSSON;
 ```
 
+### Stop NetworkManager trying to talk to USB-CDC devices on Ubuntu
+In `/etc/udev/rules.d/blabla.rules`, put:
+```
+ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="6018", ENV{ID_MM_DEVICE_IGNORE}="1"
+```
+
+Modify vendor and product IDs as appropriate (black magic probe shown here).
+
 ---
 
 ## STM32 and libopencm3

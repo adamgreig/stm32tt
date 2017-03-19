@@ -39,6 +39,8 @@ Somewhere in your main loop:
 
 ### Debug access during sleep
 Before sleeping or during initialisation:
+
+STM32F4:
 ```
     /* Allow debug access during WFI sleep */
     DBGMCU->CR |= DBGMCU_CR_DBG_SLEEP;
@@ -128,6 +130,8 @@ Go to WFI sleep mode when no threads are running (requires idle thread). In `chc
 #define CORTEX_ENABLE_WFI_IDLE TRUE
 ```
 
+Consider enabling debug access during sleep (see above) when this is enabled.
+
 ### STM32F7: Disable DCACHE on SRAM2
 In `mcuconf.h`:
 ```
@@ -207,3 +211,11 @@ Optionally include `GPIOA->ODR |= 1;` if you have an error LED that can be lit w
 [Cargo template for Cortex-M projects](https://github.com/japaric/cortex-m-template)
 
 [Guide to embedded devleopment in Rust](https://japaric.github.io/copper)
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.slim.min.js"></script>
+<script type="text/javascript">
+$('.h2,h3,h4,h5,h6').filter('[id]').each(function () {
+    $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + 
+    '</a>');
+});
+</script>

@@ -1,3 +1,6 @@
+---
+title: STM32 Tips and Tricks
+---
 <style type="text/css">
 ul > li {
     margin-left: 10px;
@@ -220,7 +223,7 @@ Optionally include `GPIOA->ODR |= 1;` if you have an error LED that can be lit w
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.slim.min.js"></script>
 <script type="text/javascript">
-$('.h2,h3,h4,h5,h6').filter('[id]').each(function () {
+$('h2,h3,h4,h5,h6').filter('[id]').each(function () {
     $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + 
     '</a>');
 });

@@ -1,7 +1,7 @@
 ---
 title: STM32 Tips and Tricks
 ---
-<style type="text/css" src="style.css"></style>
+<link rel="stylesheet" href="/style.css">
 
 # STM32 Tips and Tricks
 

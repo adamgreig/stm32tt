@@ -163,6 +163,11 @@ RCC->CR |= RCC_CR_CSSON;
 
 ## STM32 and libopencm3
 
+### `gpio_get` returns bits in original position
+If you're using `gpio_get` and assigning its return value to something, don't 
+forget it keeps all bits in their original position, so you may need to shift 
+the result down to get a `0` or `1`. Thanks, @jamescoxon!
+
 ---
 
 ## STM32 and GDB

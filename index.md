@@ -226,9 +226,10 @@ Optionally include `GPIOA->ODR |= 1;` if you have an error LED that can be lit w
 ## STM32 and Rust
 
 ### Useful Links
-[Cargo template for Cortex-M projects](https://github.com/japaric/cortex-m-template)
 
-[Guide to embedded devleopment in Rust](https://japaric.github.io/copper)
+[Quickstart template for Cortex-M projects](https://github.com/rust-embedded/cortex-m-quickstart)
+
+[Guide to embedded devleopment in Rust](https://doc.rust-lang.org/embedded-book/)
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
 <script type="text/javascript">

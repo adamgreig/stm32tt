@@ -11,6 +11,9 @@ Canonical URL: <https://stm32.agg.io>
 
 Please help: <https://github.com/adamgreig/stm32tt>
 
+### A general comment
+The ST documentation is very DRY (Don't repeat yourself). For example, if one is working on DMA and reads just the DMA section of the datasheet, crucial related information will be missed because it is in other sections. A good idea is to search the entire document for the topic (e.g DMA) and read the notes from other sections for example RCC and DCACHE.
+
 * Table of Contents
 {:toc}
 
@@ -42,6 +45,9 @@ Somewhere in your main loop:
         IWDG->KR = 0xAAAA;
 ```
 
+### Peripheral Enabling
+Many of the peripherals including DMA need to have a clock enabled before they can be configured. If using CubeMX, the configuration code is automatically generated. There is a known issue though. The init code may be issued in the wrong order, thereby preventing configuration from succeeding. See https://community.st.com/s/question/0D50X0000Bmob3uSQA/dma-not-working-in-cubemx-generated-code-order-of-initialization
+
 ### Debug access during sleep
 Before sleeping or during initialisation:
 
@@ -50,6 +56,11 @@ STM32F4:
     /* Allow debug access during WFI sleep */
     DBGMCU->CR |= DBGMCU_CR_DBG_SLEEP;
 ```
+
+### Analog Watchdog
+The ADC analog watchdog is a very useful peripheral that allow an interrupt to be generated when the ADC value goes out of bounds. What is the source of the data for comparison? One might assume it is the final ADC output data. One would be wrong. In the Over-Sampling section of the ADC documentation there is a small note stating that the analog watchdog is fed the values from the oversampler accumulator *before* any right shifting. This means that the bounds that one sets must be left shifted appropriately.
+
+
 
 ### DCACHE on STM32F7
 The F7 has a DCACHE that needs careful management.
